@@ -5,8 +5,8 @@ A fully responsive, production-ready full-stack e-commerce web application built
 ---
 
 ## 🚀 Live Demo
-* **Frontend Client:** [View Live App](https://client-gamma-six-91.vercel.app)
-* **Backend API:** [API Server Status](https://keshav-e-commerce.vercel.app)
+* **Frontend Client:** [View Live App](https://keshav-e-commerce.vercel.app)
+* **Backend API:** [API Server Status](https://server-six-coral-37.vercel.app)
 
 ---
 
