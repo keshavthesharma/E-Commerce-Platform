@@ -12,7 +12,8 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/register', {
+            // Updated to use relative path for Vercel deployment
+            const response = await axios.post('/api/auth/register', {
                 name, email, password
             });
             // Store the JWT and user data in local storage

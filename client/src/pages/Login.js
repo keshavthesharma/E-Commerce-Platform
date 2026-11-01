@@ -11,7 +11,8 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', {
+            // Updated to use relative path for Vercel deployment
+            const response = await axios.post('/api/auth/login', {
                 email, password
             });
             // Store the JWT and user data in local storage

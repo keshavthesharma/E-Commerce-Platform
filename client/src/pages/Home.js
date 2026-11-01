@@ -13,8 +13,8 @@ const Home = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                // Send the keyword and category as query parameters to the backend
-                const { data } = await axios.get(`http://localhost:5000/api/products?keyword=${keyword}&category=${category}`);
+                // Send the keyword and category as query parameters to the backend using a relative path
+                const { data } = await axios.get(`/api/products?keyword=${keyword}&category=${category}`);
                 setProducts(data);
             } catch (error) {
                 console.error('Error fetching products', error);

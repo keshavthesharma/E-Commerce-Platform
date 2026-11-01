@@ -14,10 +14,10 @@ const ProductDetails = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                // Fetch the single product using your backend API
-                const response = await axios.get(`http://localhost:5000/api/products/${id}`);
+                // Fetch the single product using the relative path
+                const response = await axios.get(`/api/products/${id}`);
                 setProduct(response.data);
-                setLoading(false);
+                loading(false);
             } catch (error) {
                 console.error('Error fetching product details:', error);
                 setLoading(false);
