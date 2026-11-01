@@ -22,14 +22,18 @@ mongoose.connect(process.env.MONGO_URI)
 // Register API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes); // Added Product routes registration
+app.use('/api/orders', orderRoutes);
 
 // Basic API Route
 app.get('/', (req, res) => {
     res.send('E-commerce API is running...');
 });
 
-app.use('/api/orders', orderRoutes);
+// Start the server ONLY if not in production (Vercel handles this automatically)
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
 
-// Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Export the Express API for Vercel Serverless Functions
+module.exports = app;
