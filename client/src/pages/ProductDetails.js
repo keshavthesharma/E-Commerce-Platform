@@ -17,7 +17,7 @@ const ProductDetails = () => {
                 // Fetch the single product using the relative path
                 const response = await axios.get(`/api/products/${id}`);
                 setProduct(response.data);
-                loading(false);
+                setLoading(false); // Fixed typo here
             } catch (error) {
                 console.error('Error fetching product details:', error);
                 setLoading(false);
