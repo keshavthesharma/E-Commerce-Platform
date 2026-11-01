@@ -38,7 +38,8 @@ const Checkout = () => {
                 totalAmount: cartTotal,
             };
 
-            await axios.post('http://localhost:5000/api/orders', orderData, config);
+            // Updated to use relative path for Vercel deployment
+            await axios.post('/api/orders', orderData, config);
             
             localStorage.removeItem('cart');
             alert('Order placed successfully!');
