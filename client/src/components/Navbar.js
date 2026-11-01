@@ -18,7 +18,12 @@ const Navbar = () => {
 
     return (
         <nav style={{ padding: '15px', backgroundColor: '#333', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>
+            <Link to="/" style={{ color: '#fff', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <img 
+                    src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" 
+                    alt="Logo" 
+                    style={{ height: '30px', width: '30px', objectFit: 'contain', filter: 'invert(1)' }} 
+                />
                 <h2 style={{ margin: 0 }}>My E-Commerce</h2>
             </Link>
             <div>
